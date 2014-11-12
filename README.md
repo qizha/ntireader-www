@@ -1,6 +1,3 @@
-Qi's docker project
-======
-
 # ntireader-www
 ## NTI Buddhist Text Reader
 
