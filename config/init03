@@ -1,0 +1,5 @@
+/usr/bin/mysql -u$DB_USER -p$DB_PASSWORD -h $DB_HOST -e "CREATE DATABASE IF NOT EXISTS cse_dict DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci"
+/usr/bin/mysql -u$DB_USER -p$DB_PASSWORD -h $DB_HOST -Dcse_dict < /tmp/buddhist/data/dictionary/dictionary.ddl
+cd /tmp/buddhist/data/dictionary
+/usr/bin/mysql -u$DB_USER -p$DB_PASSWORD -h $DB_HOST -Dcse_dict --local-infile=1 < /tmp/buddhist/data/dictionary/load_data.sql
+rm -rf /tmp/buddhist
